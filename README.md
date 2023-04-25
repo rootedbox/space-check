@@ -1,36 +1,36 @@
-<h1 align="center">Welcome to space-check 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
-  </a>
-</p>
+# Space Check
 
-> simple web server that checks if you have enough space based off of configuration
+This is a simple web server built with Node.js and Express that checks the available space on the hard drive and returns a plain text response indicating whether the amount of space available is greater than a specified threshold.
 
-## Install
+## Installation
 
-```sh
+To install this application, clone the repository and run `npm install` to install the required dependencies:
+
+```
+git clone https://github.com/rootedbox/space-check.git
+cd space-check
 npm install
-cp .env.example .env
-nano .env
 ```
 
 ## Usage
 
-```sh
-npm run start
+To start the server, run the following command:
+
+```
+npm start
 ```
 
-## Author
+By default, the server will run on port 3000. You can configure the port and the amount of free space required by creating a `.env` file in the root of your project and setting the following variables:
 
-👤 **Jason Jacobs**
+```
+PORT=3000
+THRESHOLD=1000000000
+```
 
-* Website: https://www.linkedin.com/in/rootedbox/
-* Github: [@rootedbox](https://github.com/rootedbox)
+In this example, the server will run on port 3000 and require at least 1 GB of free space on the hard drive.
 
-## Show your support
+Once the server is running, you can make a GET request to the root path (`/`) to check the amount of free space. The server will respond with a plain text response indicating whether the amount of space available is greater than or equal to the specified threshold.
 
-Give a ⭐️ if this project helped you!
+## License
 
-***
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
